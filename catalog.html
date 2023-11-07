@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>QAZTECH</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon2.png" />
+
+    <!-- BootStrap v5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Center website */
+      .myBtnContainer {
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      /* .myBtnContainer {
+        margin: 100px auto;
+      } */
+
+      h1 {
+        font-size: 50px;
+        word-break: break-all;
+      }
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial;
+      }
+
+      .row {
+        margin: 8px -16px;
+      }
+
+      /* Add padding BETWEEN each column (if you want) */
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.33%;
+        display: none; /* Hide columns by default */
+      }
+
+      /* Clear floats after rows */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Content */
+      .content {
+        background-color: white;
+        padding: 10px;
+      }
+
+      /* The "show" class is added to the filtered elements */
+      .show {
+        display: block;
+      }
+
+      /* Style the buttons */
+      .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      /* Add a grey background color on mouse-over */
+      .btn:hover {
+        background-color: #ddd;
+      }
+
+      /* Add a dark background color to the active button */
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ==============Navbar=================== -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand me-auto" href="#">
+          <svg href="assets/dashcube.svg" height="2em" viewBox="0 0 448 512">
+            <path
+              d="M326.6 104H110.4c-51.1 0-91.2 43.3-91.2 93.5V427c0 50.5 40.1 85 91.2 85h227.2c51.1 0 91.2-34.5 91.2-85V0L326.6 104zM153.9 416.5c-17.7 0-32.4-15.1-32.4-32.8V240.8c0-17.7 14.7-32.5 32.4-32.5h140.7c17.7 0 32 14.8 32 32.5v123.5l51.1 52.3H153.9z"
+            /></svg
+        ></a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <svg
+                href="assets/dashcube.svg"
+                height="2em"
+                class="icon"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M326.6 104H110.4c-51.1 0-91.2 43.3-91.2 93.5V427c0 50.5 40.1 85 91.2 85h227.2c51.1 0 91.2-34.5 91.2-85V0L326.6 104zM153.9 416.5c-17.7 0-32.4-15.1-32.4-32.8V240.8c0-17.7 14.7-32.5 32.4-32.5h140.7c17.7 0 32 14.8 32 32.5v123.5l51.1 52.3H153.9z"
+                />
+              </svg>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-lg-2"
+                  aria-current="page"
+                  href="index.html"
+                  >Негізгі бет</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="catalog.html">Каталог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="contact.html">Байланыс</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="faq.html">Сұрақтар</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="login.html" class="login-button">Тіркелу</a>
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="cccontainer">
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">
+          Барлығы
+        </button>
+        <button class="btn" onclick="filterSelection('laptop')">
+          Ноутбуктар
+        </button>
+        <button class="btn" onclick="filterSelection('phone')">
+          Смартфондар
+        </button>
+        <button class="btn" onclick="filterSelection('watch')">
+          Смарт-сағаттар
+        </button>
+      </div>
+
+      <!-- Portfolio Gallery Grid -->
+      <div class="row">
+        <div class="column laptop">
+          <div class="content">
+            <img
+              src="assets/Catalog/laptop1.jpg"
+              alt="Macbook"
+              style="width: 72%"
+            />
+            <h4>Macbook Air 13</h4>
+            <span class="price">459890 ₸ <del>700000 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+        <div class="column laptop">
+          <div class="content">
+            <img
+              src="assets/Catalog/laptop2.jpg"
+              alt="Asus"
+              style="width: 70%"
+            />
+            <h4>Asus VivoBook</h4>
+            <span class="price">405000 ₸ <del>680000 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+        <div class="column laptop">
+          <div class="content">
+            <img
+              src="assets/Catalog/laptop3.webp"
+              alt="Legion 5"
+              style="width: 70%"
+            />
+            <h4>Legion 5</h4>
+            <span class="price">639000 ₸ <del>850000 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+
+        <div class="column phone">
+          <div class="content">
+            <img
+              src="assets/Catalog/iphone15.png"
+              alt="iphone15"
+              style="width: 70%"
+            />
+            <h4>Iphone 15</h4>
+            <span class="price">2000 ₸ <del>2500 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+        <div class="column phone">
+          <div class="content">
+            <img
+              src="assets/Catalog/30066736b.avif"
+              alt="s23"
+              style="width: 70%"
+            />
+            <h4>Galaxy S23 Ultra</h4>
+            <span class="price">2000 ₸ <del>2500 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+        <div class="column phone">
+          <div class="content">
+            <img
+              src="assets/Catalog/mi12lite.png"
+              alt="mi12l"
+              style="width: 70%"
+            />
+            <h4>Xiaomi Mi 12 Lite</h4>
+            <span class="price">2000 ₸ <del>2500 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+
+        <div class="column watch">
+          <div class="content">
+            <img
+              src="assets/Catalog/apwatse.webp"
+              alt="applewatch"
+              style="width: 70%"
+            />
+            <h4>Apple Watch SE</h4>
+            <span class="price">189990 ₸<del>249990 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+        <div class="column watch">
+          <div class="content">
+            <img
+              src="assets/Catalog/sglw6.webp"
+              alt="galaxywatch"
+              style="width: 70%"
+            />
+            <h4>Samsung Galaxy Watch 6</h4>
+            <span class="price">169990 ₸ <del>219990 ₸</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+        <div class="column watch">
+          <div class="content">
+            <img
+              src="assets/Catalog/xrw2l.jpg"
+              alt="xiaomiwatch"
+              style="width: 70%"
+            />
+            <h4>Xiaomi Redmi Watch 2 Lite</h4>
+            <span class="price">29122 ₸ <del>59990</del></span>
+            <br />
+            <button class="buttonc">Тапсырыс беру</button>
+          </div>
+        </div>
+        <!-- END GRID -->
+      </div>
+    </div>
+    <!-- =========== Footer Section ============= -->
+    <footer id="footer">
+      <div class="footer py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="footer-social pt-4 text-center">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="footer-copy">
+                <div class="copy-right text-center pt-5">
+                  <p class="text-light">
+                    © 2023. QAZTECH. All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <!---------Scripts-----------------Scripts-----------------Scripts-----------------Scripts-----------------Scripts-------->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
